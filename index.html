@@ -2,21 +2,27 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Hotwire sample area3</title>
+  <title>CodePen - Hotwire sample</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css'>
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<option value="8">茨城県</option>
-<option value="９">栃木県</option>
-<option value="１０">群馬県</option>
-<option value="１１">埼玉県</option>
-<option value="１２">千葉県</option>
-<option value="１３">東京都</option>
-<option value="１４">神奈川県</option>
+<main class="container">
+  <div class="grid">
+    <button hx-get="area1.html" hx-trigger="click" hx-target="#prefecture">北海道</button>
+    <button hx-get="area2.html" hx-trigger="click" hx-target="#prefecture">東北</button>
+    <button hx-get="https://www.dropbox.com/scl/fi/7pg9rd3phfq1samh471ch/index.html?rlkey=cbxctmsuxt4i8iz9zl739yuj4&amp;dl=0" hx-trigger="click" hx-target="#prefecture">関東</button>
+    <button hx-get="area4.html" hx-trigger="click" hx-target="#prefecture">中部</button>
+    <button hx-get="area5.html" hx-trigger="click" hx-target="#prefecture">近畿</button>
+    <button hx-get="area6.html" hx-trigger="click" hx-target="#prefecture">中国</button>
+    <button hx-get="area7.html" hx-trigger="click" hx-target="#prefecture">四国</button>
+    <button hx-get="area8.html" hx-trigger="click" hx-target="#prefecture">九州・沖縄</button>
+  </div>
+  <select id="prefecture"></select>
+</main>
 <!-- partial -->
-  
+  <script src='https://unpkg.com/htmx.org@1.9.6'></script>
 </body>
 </html>
